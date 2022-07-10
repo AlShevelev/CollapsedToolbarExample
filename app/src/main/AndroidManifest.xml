@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CollapsedToolbarExample">
         <activity
+            android:name=".SecondCaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FirstCaseActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
