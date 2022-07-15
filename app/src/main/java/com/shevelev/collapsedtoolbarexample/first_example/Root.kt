@@ -35,7 +35,7 @@ internal fun Root() {
                     .fillMaxSize()
                     .nestedScroll(nestedScroll)
             ) {
-                TopBarCollapsed(
+                TopBarCollapsing(
                     currentOffset = offset,
                     maxOffset = toolbarHeightPx.value,
                     onHeightCalculated = {

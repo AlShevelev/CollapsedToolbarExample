@@ -19,7 +19,7 @@ import kotlin.math.pow
 import kotlin.math.roundToInt
 
 @Composable
-internal fun TopBarCollapsed(
+internal fun TopBarCollapsing(
     currentOffset: Float,
     maxOffset: Float,
     onHeightCalculated: (Float) -> Unit

@@ -24,7 +24,6 @@ internal fun CoordinatedScroll(
     val nestedScrollConnection = remember {
         object : NestedScrollConnection {
             override fun onPreScroll(available: Offset, source: NestedScrollSource): Offset {
-                // try to consume before LazyColumn to collapse toolbar if needed, hence pre-scroll
                 val delta = available.y
 
                 var absoluteOffset = currentAbsoluteOffsetPx.value + delta
