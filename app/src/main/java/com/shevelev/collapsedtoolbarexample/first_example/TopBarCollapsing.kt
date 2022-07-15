@@ -22,15 +22,14 @@ import kotlin.math.roundToInt
 internal fun TopBarCollapsing(
     currentOffset: Float,
     maxOffset: Float,
+    modifier: Modifier = Modifier,
     onHeightCalculated: (Float) -> Unit
 ) {
     val alpha = (abs(currentOffset) / maxOffset).pow(0.75f)
 
     Column(
-        modifier = Modifier
-            .zIndex(1f)
+        modifier = modifier
             .offset { IntOffset(x = 0, y = currentOffset.roundToInt()) }
-            .fillMaxWidth()
             .background(Color.Blue)
             .padding(start = 16.dp)
             .onGloballyPositioned {
@@ -47,7 +46,6 @@ internal fun TopBarCollapsing(
             color = Color.White,
             modifier = Modifier.alpha(1f - alpha)
         )
-
         Text(
             text = "Some text 3",
             color = Color.White,
